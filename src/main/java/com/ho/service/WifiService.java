@@ -2,6 +2,7 @@ package com.ho.service;
 
 import com.ho.dao.DbConnection;
 import com.ho.dto.WifiDto;
+import com.ho.repository.WifiRepository;
 import com.ho.vo.WifiVo;
 
 import java.sql.Connection;
@@ -10,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class WifiService {
+public class WifiService implements WifiRepository {
     private static final WifiService wifiService = new WifiService();
     private static DbConnection dbConnection = DbConnection.getInstance();
     private static Connection conn = null;
@@ -21,6 +22,7 @@ public class WifiService {
         return wifiService;
     }
 
+    @Override
     public void insertWifiInfos(String sql, List<WifiDto> list) throws SQLException {
         conn = dbConnection.getConnection(conn);
 
@@ -73,7 +75,8 @@ public class WifiService {
         }
     }
 
-    public void deleteAllwifiInfos(String sql) throws SQLException {
+    @Override
+    public void deleteAllWifiInfos(String sql) throws SQLException {
         conn = dbConnection.getConnection(conn);
         conn.setAutoCommit(false);
 
@@ -88,6 +91,7 @@ public class WifiService {
         }
     }
 
+    @Override
     public void getWifiList(String sql, List<WifiVo> list){
         conn = dbConnection.getConnection(conn);
 
