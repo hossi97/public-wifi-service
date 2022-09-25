@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet("/LocationHistory")
@@ -22,7 +23,12 @@ public class GetHistoryListController extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        List<HistoryVo> list = historyDao.selectHistoryList();
+        List<HistoryVo> list = null;
+        try {
+            list = historyDao.selectHistoryList();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         req.setAttribute("list", list);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/history.jsp");
