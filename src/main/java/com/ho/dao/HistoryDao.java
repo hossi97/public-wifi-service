@@ -22,7 +22,7 @@ public class HistoryDao {
         return historyService.DeleteHistoryInfos(sql, historyId);
     }
 
-    public List<HistoryVo> selectHistoryList() throws SQLException {
+    public List<HistoryVo> selectHistoryList() {
         String sql = "select * from history order by id desc";
 
         List<HistoryVo> list = new ArrayList<>();

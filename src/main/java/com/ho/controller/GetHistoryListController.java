@@ -23,12 +23,7 @@ public class GetHistoryListController extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        List<HistoryVo> list = null;
-        try {
-            list = historyDao.selectHistoryList();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        List<HistoryVo> list = historyDao.selectHistoryList();
 
         req.setAttribute("list", list);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/history.jsp");

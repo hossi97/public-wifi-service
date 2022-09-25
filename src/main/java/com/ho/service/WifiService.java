@@ -70,9 +70,6 @@ public class WifiService {
         } finally {
             conn.setAutoCommit(true);
             dbConnection.close(conn, ps, rs);
-            System.out.println("=============== 1 ===============");
-            System.out.println(conn.isClosed());
-            System.out.println(ps.isClosed());
         }
     }
 
@@ -88,13 +85,10 @@ public class WifiService {
             throw new RuntimeException(e);
         } finally {
             dbConnection.close(conn, ps, rs);
-            System.out.println("=============== 2 ===============");
-            System.out.println(conn.isClosed());
-            System.out.println(ps.isClosed());
         }
     }
 
-    public void getWifiList(String sql, List<WifiVo> list) throws SQLException {
+    public void getWifiList(String sql, List<WifiVo> list){
         conn = dbConnection.getConnection(conn);
 
         try {
@@ -129,10 +123,6 @@ public class WifiService {
             throw new RuntimeException(e);
         } finally {
             dbConnection.close(conn, ps, rs);
-            System.out.println("=============== 3 ===============");
-            System.out.println(conn.isClosed());
-            System.out.println(ps.isClosed());
-            System.out.println(rs.isClosed());
         }
     }
 

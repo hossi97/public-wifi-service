@@ -12,10 +12,10 @@
     <list default="true" id="c0cf5601-468c-4486-9eff-e6652b4de4c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/controller/GetHistoryListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/controller/GetHistoryListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/controller/WifiNearController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/controller/WifiNearController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/dao/HistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/dao/HistoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/dao/WifiDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/dao/WifiDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/dto/WifiDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/dto/WifiDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/service/HistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/service/HistoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/service/WifiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/service/WifiService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

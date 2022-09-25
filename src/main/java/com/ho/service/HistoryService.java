@@ -43,9 +43,6 @@ public class HistoryService {
             throw new RuntimeException(e);
         } finally {
             dbConnection.close(conn, ps, rs);
-            System.out.println("=============== 4 ===============");
-            System.out.println(conn.isClosed());
-            System.out.println(ps.isClosed());
         }
 
         return count;
@@ -72,15 +69,12 @@ public class HistoryService {
             throw new RuntimeException(e);
         } finally {
             dbConnection.close(conn, ps, rs);
-            System.out.println("=============== 5 ===============");
-            System.out.println(conn.isClosed());
-            System.out.println(ps.isClosed());
         }
 
         return count;
     }
 
-    public void getHistoryInfos(String sql, List<HistoryVo> list) throws SQLException {
+    public void getHistoryInfos(String sql, List<HistoryVo> list){
 
         conn = dbConnection.getConnection(conn);
 
@@ -100,9 +94,6 @@ public class HistoryService {
             throw new RuntimeException(e);
         } finally {
             dbConnection.close(conn, ps, rs);
-            System.out.println("=============== 6 ===============");
-            System.out.println(ps.isClosed());
-            System.out.println(rs.isClosed());
         }
     }
 

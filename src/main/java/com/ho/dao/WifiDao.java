@@ -36,7 +36,7 @@ public class WifiDao {
     }
 
     // 내근처 와이파이 조회
-    public List<WifiVo> selectSearchWifiList(Double lat, Double lnt) throws SQLException {
+    public List<WifiVo> selectSearchWifiList(Double lat, Double lnt) {
         String sql = "select * " +
                 ", format((6371 * acos(cos(radians(" + lat + ")) * cos(radians(lat)) * cos(radians(lnt) - radians(" + lnt + ")) " +
                 "+ sin(radians(" + lat + ")) * sin(radians(lat)))), 4) as distance " +
