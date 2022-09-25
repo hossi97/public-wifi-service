@@ -1,6 +1,7 @@
 package com.ho.service;
 
 import com.ho.dao.DbConnection;
+import com.ho.repository.HistoryRepository;
 import com.ho.vo.HistoryVo;
 
 import java.sql.Connection;
@@ -9,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class HistoryService {
+public class HistoryService implements HistoryRepository {
     private static final HistoryService historyService = new HistoryService();
     private static DbConnection dbConnection = DbConnection.getInstance();
     private static Connection conn = null;
@@ -20,6 +21,7 @@ public class HistoryService {
         return historyService;
     }
 
+    @Override
     public int insertHistoryInfos(String sql, Double lat, Double lnt) throws SQLException {
         int count = 0;
 
@@ -48,7 +50,7 @@ public class HistoryService {
         return count;
     }
 
-
+    @Override
     public int DeleteHistoryInfos(String sql, int historyId) throws SQLException {
         int count = 0;
 
@@ -74,6 +76,7 @@ public class HistoryService {
         return count;
     }
 
+    @Override
     public void getHistoryInfos(String sql, List<HistoryVo> list){
 
         conn = dbConnection.getConnection(conn);

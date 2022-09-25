@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0cf5601-468c-4486-9eff-e6652b4de4c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/controller/GetHistoryListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/controller/GetHistoryListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/dao/HistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/dao/HistoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/dao/WifiDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/dao/WifiDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ho/service/HistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ho/service/HistoryService.java" afterDir="false" />
@@ -53,6 +52,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -75,20 +75,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/limsmac/zerobase/project/PublicWifiService&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15527344&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "temurin-1.8",
+    "last_opened_file_path": "/Users/limsmac/zerobase/project/PublicWifiService",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15527344",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />

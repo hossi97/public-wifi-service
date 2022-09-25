@@ -1,5 +1,6 @@
 package com.ho.dao;
 
+import com.ho.repository.HistoryRepository;
 import com.ho.service.HistoryService;
 import com.ho.vo.HistoryVo;
 
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryDao {
-    HistoryService historyService = HistoryService.getHistoryService();
+    HistoryRepository historyService = HistoryService.getHistoryService();
 
     public int insertHistory(Double lat, Double lnt) throws SQLException {
         String sql = "insert into history(lat, lnt, date) values(?, ?, now())";

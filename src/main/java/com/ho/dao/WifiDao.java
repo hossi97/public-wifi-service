@@ -6,6 +6,7 @@
 package com.ho.dao;
 
 import com.ho.dto.WifiDto;
+import com.ho.repository.WifiRepository;
 import com.ho.service.WifiService;
 import com.ho.vo.WifiVo;
 
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WifiDao {
-    WifiService wifiService = WifiService.getWifiService();
+    WifiRepository wifiService = WifiService.getWifiService();
 
     public void insertWifi(List<WifiDto> list) throws SQLException {
         String sql = "insert into wifi(x_swifi_mgr_no, x_swifi_wrdofc, x_swifi_main_nm,\n" +
@@ -31,7 +32,7 @@ public class WifiDao {
     public void deleteAll() throws SQLException {
         String sql = "truncate table wifi";
 
-        wifiService.deleteAllwifiInfos(sql);
+        wifiService.deleteAllWifiInfos(sql);
 
     }
 
