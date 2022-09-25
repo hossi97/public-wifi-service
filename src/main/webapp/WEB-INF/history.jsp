@@ -2,52 +2,45 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   <!-- -->
 
 <html>
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Title</title>
-</head>
-<body>
-<%@ include file="./common/menuBar.jsp"%>
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>x좌표</th>
-            <th>y좌표</th>
-            <th>조회일자</th>
-            <th>비고</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${list}" var="history">
+    <head>
+        <title>위치 히스토리 목록</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="/resources/css/index.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>와이파이 정보 구하기</h1>
+        <%@ include file="./common/menuBar.jsp"%>
+        <table class="history-table" style="able-layout: fixed; width: 1650px">
+            <thead>
+            <colgroup>
+                <col style="width: 100px">
+                <col style="width: 400px">
+                <col style="width: 400px">
+                <col style="width: 600px">
+                <col style="width: 200px">
+            </colgroup>
             <tr>
-                <td><c:out value="${history.id}"/></td>
-                <td><c:out value="${history.lat}"/></td>
-                <td><c:out value="${history.lnt}"/></td>
-                <td><c:out value="${history.date}"/></td>
-                <td>
-                    <button type="button" class="deleteBtn">삭제</button>
-                </td>
+                <th class="history-info">ID</th>
+                <th class="history-info">x좌표</th>
+                <th class="history-info">y좌표</th>
+                <th class="history-info">조회일자</th>
+                <th class="history-info">비고</th>
             </tr>
-            </c:forEach>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            <c:forEach items="${list}" var="history">
+                <tr>
+                    <td><c:out value="${history.id}"/></td>
+                    <td><c:out value="${history.lat}"/></td>
+                    <td><c:out value="${history.lnt}"/></td>
+                    <td><c:out value="${history.date}"/></td>
+                    <td>
+                        <button type="button" class="deleteBtn">삭제</button>
+                    </td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+        <script src="/resources/js/history.js"></script>
     </body>
 </html>
-
-<script>
-    $(".deleteBtn").click(function () {
-        let checkBtn = $(this);
-        let tr = checkBtn.parent().parent();
-        let td = tr.children();
-        let historyId = td.eq(0).text();
-
-        //서블릿 호출
-        $.ajax({
-            type: "post",
-            url : "http://localhost:8080/RemoveHistory?historyId=" + historyId  // 포트 변경하기, 여러개는 & 이용
-        }).done(function () {
-            location.reload();
-        })
-    })
-</script>
