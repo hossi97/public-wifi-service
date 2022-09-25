@@ -13,7 +13,6 @@ public class WifiDto {
     @SerializedName("X_SWIFI_MAIN_NM")
     private String mainNm;
 
-
     @SerializedName("X_SWIFI_ADRES1")
     private String adres1;
     @SerializedName("X_SWIFI_ADRES2")
@@ -21,14 +20,12 @@ public class WifiDto {
     @SerializedName("X_SWIFI_INSTL_FLOOR")
     private String floor;
 
-
     @SerializedName("X_SWIFI_INSTL_TY")
     private String ty;
     @SerializedName("X_SWIFI_INSTL_MBY")
     private String mby;
     @SerializedName("X_SWIFI_SVC_SE")
     private String svcSe;
-
 
     @SerializedName("X_SWIFI_CMCWR")
     private String cmcwr;

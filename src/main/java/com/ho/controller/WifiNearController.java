@@ -30,7 +30,7 @@ public class WifiNearController extends HttpServlet {
         request.setAttribute("lnt", lnt);
 
         List<WifiVo> list = wifiDao.selectSearchWifiList(lat, lnt);
-        int count = historyDao.insertHistory(lat, lnt);     // 실행된 개수
+        historyDao.insertHistory(lat, lnt);
 
         request.setAttribute("list", list);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/");    // index.jsp 는 생략 가능
