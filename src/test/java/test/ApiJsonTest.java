@@ -1,4 +1,4 @@
-package com.ho.test;
+package test;
 
 import com.ho.dto.MainDto;
 import com.ho.dto.WifiDto;
