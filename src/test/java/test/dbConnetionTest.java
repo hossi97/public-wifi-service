@@ -1,4 +1,4 @@
-package com.ho.test;
+package test;
 
 
 import java.sql.*;

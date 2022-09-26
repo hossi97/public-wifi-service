@@ -1,4 +1,4 @@
-package com.ho.test;
+package test;
 
 import com.ho.publicwifiapi.JsonParser;
 import com.ho.publicwifiapi.PublicWifiApi;

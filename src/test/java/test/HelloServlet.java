@@ -1,4 +1,4 @@
-package com.ho.test;
+package test;
 
 import java.io.*;
 import javax.servlet.http.*;
